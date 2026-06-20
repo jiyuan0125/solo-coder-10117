@@ -1,0 +1,55 @@
+{
+  "name": "@commitlint/config-pnpm-scopes",
+  "version": "21.0.2",
+  "gitHead": "e82f05a737626bb69979d14564f5ff601997f679",
+  "description": "Shareable commitlint config enforcing pnpm workspaces names as scopes",
+  "keywords": [
+    "commitlint",
+    "commitlint-config",
+    "conventional-changelog",
+    "pnpm"
+  ],
+  "homepage": "https://commitlint.js.org/",
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "license": "MIT",
+  "author": "Dan Onoshko <danon0404@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git",
+    "directory": "@commitlint/config-pnpm-scopes"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "deps": "dep-check",
+    "pkg": "pkg-check"
+  },
+  "dependencies": {
+    "@pnpm/read-project-manifest": "^6.0.0",
+    "read-yaml-file": "^3.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/test": "workspace:^",
+    "@commitlint/utils": "workspace:^",
+    "@types/node": "^22.0.0",
+    "typescript": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

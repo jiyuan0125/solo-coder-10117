@@ -1,0 +1,62 @@
+{
+  "name": "@commitlint/cz-commitlint",
+  "version": "21.0.2",
+  "gitHead": "e82f05a737626bb69979d14564f5ff601997f679",
+  "description": "Commitizen adapter using the commitlint.config.js",
+  "keywords": [
+    "commitizen",
+    "commitlint",
+    "conventional-changelog",
+    "cz",
+    "cz-commitlint"
+  ],
+  "homepage": "https://commitlint.js.org/",
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "license": "MIT",
+  "author": "Curly Brackets <water.curly@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git",
+    "directory": "@commitlint/cz-commitlint"
+  },
+  "files": [
+    "index.cjs",
+    "lib"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./index.cjs"
+  },
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "@commitlint/ensure": "workspace:^",
+    "@commitlint/load": "workspace:^",
+    "@commitlint/types": "workspace:^",
+    "is-plain-obj": "^4.1.0",
+    "picocolors": "^1.1.1",
+    "word-wrap": "^1.2.5"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "commitizen": "^4.2.4"
+  },
+  "peerDependencies": {
+    "commitizen": "^4.0.3",
+    "inquirer": "^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./@commitlint/cz-commitlint"
+    }
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "engineStrict": true
+}

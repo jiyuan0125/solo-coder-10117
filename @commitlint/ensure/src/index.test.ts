@@ -1,0 +1,40 @@
+import { test, expect } from "vitest";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+import { globSync } from "node:fs";
+import { camelCase } from "es-toolkit/compat";
+
+import * as ensure from "./index.js";
+
+const __dirname = path.resolve(fileURLToPath(import.meta.url), "..");
+
+test("exports all checkers", async () => {
+	const ignore = ["types"];
+	const expected = _glob("*.ts")
+		.map((f) => camelCase(f))
+		.sort()
+		.filter((item) => !ignore.includes(item));
+	const actual = Object.keys(ensure).sort();
+	expect(actual).toEqual(expected);
+});
+
+test("rules export functions", () => {
+	const actual = Object.values(ensure);
+	expect(actual.every((rule) => typeof rule === "function")).toBe(true);
+});
+
+function _glob(pattern: string): string[] {
+	const files = globSync(pattern, { cwd: __dirname }).filter(
+		(p) => !p.endsWith("index.ts") && !p.endsWith(".test.ts"),
+	);
+	return files.map(relative).map(toExport);
+}
+
+function relative(filePath: string): string {
+	return path.relative(__dirname, filePath);
+}
+
+function toExport(fileName: string): string {
+	return path.basename(fileName, path.extname(fileName));
+}
