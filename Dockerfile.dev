@@ -1,0 +1,8 @@
+# syntax=docker/dockerfile:1
+FROM brainpower/node-cubicle
+
+WORKDIR /root/repo
+
+ADD . ./
+RUN corepack enable && pnpm install --frozen-lockfile
+RUN pnpm build

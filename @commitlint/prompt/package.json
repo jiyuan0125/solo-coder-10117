@@ -1,0 +1,57 @@
+{
+  "name": "@commitlint/prompt",
+  "version": "21.0.2",
+  "gitHead": "e82f05a737626bb69979d14564f5ff601997f679",
+  "description": "commitizen prompt using commitlint.config.js",
+  "keywords": [
+    "commitizen",
+    "commitlint",
+    "conventional-changelog",
+    "cz",
+    "prompt"
+  ],
+  "homepage": "https://commitlint.js.org/",
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "license": "MIT",
+  "author": "Mario Nebl <hello@herebecode.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git",
+    "directory": "@commitlint/prompt"
+  },
+  "files": [
+    "lib/"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "scripts": {
+    "deps": "dep-check",
+    "pkg": "pkg-check --skip-import"
+  },
+  "dependencies": {
+    "@commitlint/ensure": "workspace:^",
+    "@commitlint/load": "workspace:^",
+    "@commitlint/types": "workspace:^",
+    "inquirer": "^9.2.15",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-angular": "workspace:^",
+    "@commitlint/types": "workspace:^",
+    "@commitlint/utils": "workspace:^",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.0.0",
+    "commitizen": "^4.2.4",
+    "rxjs": "^7.5.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./@commitlint/prompt"
+    }
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

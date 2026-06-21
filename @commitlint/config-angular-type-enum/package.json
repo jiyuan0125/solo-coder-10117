@@ -1,0 +1,38 @@
+{
+  "name": "@commitlint/config-angular-type-enum",
+  "version": "21.0.1",
+  "gitHead": "e82f05a737626bb69979d14564f5ff601997f679",
+  "description": "Shareable commitlint config enforcing the angular commit convention types",
+  "keywords": [
+    "angular",
+    "commitlint",
+    "commitlint-config",
+    "conventional-changelog"
+  ],
+  "homepage": "https://commitlint.js.org/",
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "license": "MIT",
+  "author": "Mario Nebl <hello@herebecode.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git",
+    "directory": "@commitlint/config-angular-type-enum"
+  },
+  "files": [
+    "index.js"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dep-check",
+    "pkg": "pkg-check"
+  },
+  "devDependencies": {
+    "@commitlint/utils": "workspace:^"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
