@@ -1,0 +1,46 @@
+{
+  "name": "@commitlint/prompt-cli",
+  "version": "21.0.2",
+  "gitHead": "e82f05a737626bb69979d14564f5ff601997f679",
+  "description": "commit prompt using commitlint.config.js",
+  "keywords": [
+    "commitlint",
+    "prompt"
+  ],
+  "homepage": "https://commitlint.js.org/",
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "license": "MIT",
+  "author": "Mario Nebl <hello@herebecode.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git",
+    "directory": "@commitlint/prompt-cli"
+  },
+  "bin": {
+    "commit": "./cli.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "type": "module",
+  "main": "cli.js",
+  "scripts": {
+    "commit": "$npm_package_bin_commit",
+    "deps": "dep-check",
+    "pkg": "pkg-check --skip-main"
+  },
+  "dependencies": {
+    "@commitlint/prompt": "workspace:^",
+    "inquirer": "^9.2.15",
+    "tinyexec": "^1.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/test": "workspace:^",
+    "@commitlint/utils": "workspace:^"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

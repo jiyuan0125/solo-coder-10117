@@ -1,0 +1,51 @@
+{
+  "name": "@commitlint/travis-cli",
+  "version": "21.0.2",
+  "gitHead": "e82f05a737626bb69979d14564f5ff601997f679",
+  "description": "Lint all relevant commits for a change or PR on Travis CI",
+  "keywords": [
+    "cli",
+    "commitlint",
+    "conventional-changelog"
+  ],
+  "homepage": "https://commitlint.js.org/",
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Mario Nebl",
+    "email": "hello@herebecode.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git",
+    "directory": "@commitlint/travis-cli"
+  },
+  "bin": {
+    "commitlint-travis": "./cli.js"
+  },
+  "files": [
+    "lib/",
+    "cli.js"
+  ],
+  "type": "module",
+  "main": "lib/cli.js",
+  "types": "lib/cli.d.ts",
+  "scripts": {
+    "deps": "dep-check",
+    "pkg": "pkg-check --skip-main"
+  },
+  "dependencies": {
+    "@commitlint/cli": "workspace:^",
+    "tinyexec": "^1.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/test": "workspace:^",
+    "@commitlint/utils": "workspace:^",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
